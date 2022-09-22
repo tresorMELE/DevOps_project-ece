@@ -14,6 +14,8 @@ jobs:
     strategy:
       matrix:
         node-version: [10.x]
+        # Service containers to run with `runner-job`
+    services:
         # Label used to access the service container
       redis:
         # Docker Hub image

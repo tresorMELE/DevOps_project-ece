@@ -60,6 +60,6 @@ describe('User REST API', () => {
   })
 
   // describe('GET /user', ()=> {
-  //   // TODO Create test for the get method
+  // //   // TODO Create test for the get method
   // })
 })

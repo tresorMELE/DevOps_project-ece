@@ -18,6 +18,8 @@ module.exports = {
     })
   },
   // get: (username, callback) => {
-  //   // TODO create this method
+  //   if(!user.username
+  //     return)
+  // //   // TODO create this method
   // }
 }

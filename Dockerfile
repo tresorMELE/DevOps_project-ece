@@ -1,6 +1,6 @@
 FROM node:12
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/routes
 COPY package.json .
 RUN npm install
 COPY . .

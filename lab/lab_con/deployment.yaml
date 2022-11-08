@@ -5,7 +5,7 @@ metadata:
   labels:
     app: kubernetes-bootcamp
 spec:
-  # TO COMPLETE #2
+  replicas: 3
   selector:
     matchLabels:
       app: kubernetes-bootcamp
@@ -16,4 +16,6 @@ spec:
     spec:
       containers:
       - name: kubernetes-bootcamp
-        # TO COMPLETE #1
+        image: kubernetes-bootcamp-75c5d958ff-vvj9k
+        ports:
+        - containerPort: 80

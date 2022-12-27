@@ -7,6 +7,6 @@ spec:
   selector:
     app: kubernetes-bootcamp
   ports:
-    - port: 9090
+    - port: 8080
       targetPort: 8080
       protocol: TCP

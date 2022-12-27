@@ -17,3 +17,10 @@ spec:
       containers:
       - name: kubernetes-bootcamp
         image: gcr.io/google-samples/kubernetes-bootcamp:v1
+        volumeMounts:
+        - name: pv-volume
+          mountPath: .github/K8s/image/volumes/mypvc.yaml
+      volumes:
+      - name: pv-volume
+        persistentVolumeClaim:
+          claimName: mypvc

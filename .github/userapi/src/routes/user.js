@@ -1,5 +1,6 @@
 const express = require('express')
 const userController = require('../controllers/user')
+const swaggerUi = require('swagger-ui-express');
 
 const userRouter = express.Router()
 

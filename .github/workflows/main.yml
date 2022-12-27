@@ -57,7 +57,8 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t myusername/app .
-          printf "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin          docker push myusername/app
+          docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"          
+          docker push myusername/app
 
   deploy:
     runs-on: ubuntu-latest

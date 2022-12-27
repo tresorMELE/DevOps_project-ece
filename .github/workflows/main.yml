@@ -49,9 +49,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Start Swagger UI
+      # - name: Start Swagger UI
       # interface that allows developers to interact with and test APIs
-      
+
       - name: Connect to Redis
         # Runs a script that creates a Redis client, populates
         # the client with data, and retrieves data

@@ -57,10 +57,11 @@ jobs:
         # the client with data, and retrieves data
         run: node client.js
         # Environment variable used by the `client.js` script to create
-      - name: Download Prometheus configuration
-        uses: actions/download-artifact@v2
+      - name: Upload Prometheus configuration
+        uses: actions/upload-artifact@v2
         with:
           name: prometheus
+          path: prometheus.yml
         env:
           # The hostname used to communicate with the Redis service container
           REDIS_HOST: localhost

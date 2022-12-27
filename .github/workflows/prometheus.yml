@@ -1,18 +1,17 @@
-name: Node.js CI
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+global:
+  scrape_interval: 15s
+  external_labels:
+    monitor: 'codelab-monitor'
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      # Other steps...
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
 
-      - name: Upload Prometheus configuration
-        uses: actions/upload-artifact@v2
-        with:
-          name: prometheus
-          path: prometheus.yml
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'node'
+    static_configs:
+      - targets: ['localhost:9100']

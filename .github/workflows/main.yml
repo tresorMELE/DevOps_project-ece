@@ -50,41 +50,12 @@ jobs:
           REDIS_HOST: localhost
           REDIS_PORT: 6379
 
-  build-and-push:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Build Docker image
-        run: |
-          docker build -t myusername/app .
-          docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"          
-          docker push myusername/app
-
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: Deploy to Kubernetes
         env:
           KUBECONFIG: ${{ secrets.kubeconfig }}
         run: |
-          kubectl apply -f - <<EOF
-          apiVersion: apps/v1
-          kind: Deployment
-          metadata:
-            name: app-deployment
-          spec:
-            replicas: 1
-            selector:
-              matchLabels:
-                app: app
-            template:
-              metadata:
-                labels:
-                  app: app
-              spec:
-                containers:
-                - name: app
-                  image: myusername/app:latest
-          EOF
+          kubectl apply -f .github/K8s/image/deployment/deployment.yml
 

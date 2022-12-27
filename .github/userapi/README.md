@@ -63,6 +63,6 @@ npm test
 ```
 
 ## Author
-
-Sergei Kudinov   
-sergei@adaltas.com
+Tresor MELE MBE
+Abdourah
+Mailysss

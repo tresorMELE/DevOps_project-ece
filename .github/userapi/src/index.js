@@ -27,5 +27,4 @@ const server = app.listen(port, (err) => {
   console.log("Server listening the port " + port)
 })
 
-
 module.exports = server

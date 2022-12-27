@@ -43,12 +43,13 @@ jobs:
       # Downloads a copy of the code in your repository before running CI tests
       - name: Check out repository code
         uses: actions/checkout@v3
+
       # Create the "prometheus" artifact
       - name: Create Prometheus artifact
         uses: actions/upload-artifact@v2
         with:
           name: prometheus
-          path: metrics/prometheus.yml
+          path: .github/metrics/prometheus.yml
 
       - name: Download Prometheus configuration
         uses: actions/download-artifact@v2

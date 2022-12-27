@@ -10,6 +10,7 @@
   "author": "Sergei Kudinov",
   "license": "",
   "dependencies": {
+    "config": "^3.3.8",
     "express": "^4.17.2",
     "mixme": "^0.5.4",
     "prom-client": "^14.1.0",

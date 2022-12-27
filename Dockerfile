@@ -1,22 +1,17 @@
-FROM node:14
+FROM node:latest
 
-# Create a directory for the app
-RUN mkdir -p /usr/src/app
-
-# Set the working directory
+# Create app directory
 WORKDIR /usr/src/app
 
-# Copy the package.json file to the image
-COPY package.json /usr/src/app/
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+COPY package*.json ./
 
-# Install dependencies
 RUN npm install
 
-# Copy the rest of the app code to the image
-COPY . /usr/src/app/
+# Bundle app source
+COPY . .
 
-# Expose the app's port
-EXPOSE 3000
+EXPOSE 8080
 
-# Run the app when the container starts
-CMD ["npm", "start"]
+CMD [ "node", "index.js" ]

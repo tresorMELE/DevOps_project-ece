@@ -1,7 +1,6 @@
 const express = require('express')
 const userRouter = require('./routes/user')
 const bodyParser = require('body-parser')
-const swaggerUi = require('swagger-ui-express');
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -19,7 +18,6 @@ app.use(bodyParser.json())
 app.get('/', (req, res) => res.send('Hello World!'))
 
 app.use('/user', userRouter)
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup());
 
 
 const server = app.listen(port, (err) => {

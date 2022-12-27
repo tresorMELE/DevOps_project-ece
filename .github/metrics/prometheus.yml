@@ -1,0 +1,18 @@
+name: Node.js CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Other steps...
+
+      - name: Upload Prometheus configuration
+        uses: actions/upload-artifact@v2
+        with:
+          name: prometheus
+          path: prometheus.yml

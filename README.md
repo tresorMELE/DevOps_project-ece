@@ -15,8 +15,15 @@ This is a Node.js application that demonstrates how to develop, deploy, and test
 To develop this app, follow these steps:
 
 1. Clone the repository to your local machine.
-2. Install the dependencies by running `npm install`.
+2. Install the dependencies by running `npm install`
 3. Write your code and test it locally to ensure it works as expected.
+
+## Deployment in Azure cloud
+Before you begin, make sure you have the following:
+
+1. An Azure account. If you don't have one, you can sign up for a free account
+2. In the Azure portal, select "Create a resource" from the top left corner of the dashboard
+3. log to your Github account and choise the repository to deploy and save
 
 ## Deployment with Docker
 

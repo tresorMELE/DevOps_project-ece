@@ -57,5 +57,5 @@ jobs:
         env:
           KUBECONFIG: ${{ secrets.kubeconfig }}
           PATH: /usr/local/bin:${{ env.PATH }}
-        run: kubectl apply -f deployment.yml
+        run: kubectl apply -f .github/K8s/image/deployment/deployment.yml
 

@@ -52,6 +52,24 @@ To install Swagger UI for testing API requests, follow these steps:
 1. Install the Swagger UI package by running `npm install -g swagger-ui-express` or adding it as a dependency in your `package.json` file.
 2. Add the Swagger UI middleware to the app by requiring the
 
+## Monitorin the App with prometheus
+
+To install Prometheus, follow these steps:
+
+1. Download the latest release of Prometheus from the Prometheus website.
+2. Extract the downloaded archive and navigate to the directory where Prometheus was extracted.
+3. Run the following command to build and install Prometheus: `make build` and `make install`
+
+To configure Prometheus, you will need to create a configuration file called `prometheus.yml`. In this file, you can define the targets that Prometheus should scrape data from, as well as any rules or alerts that you want Prometheus to enforce.
+For example, to scrape data from the localhost on port 9090, you can add the following configuration to the `prometheus.yml` file:
+
+```yaml
+scrape_configs:
+  - job_name: example
+    static_configs:
+      - targets: ['localhost:9090']
+
+
 
 ## Author
 ECE DevOps project

@@ -42,6 +42,15 @@ To deploy this app using Kubernetes, follow these steps:
 To set up a test environment with a Redis server, follow these steps:
 
 1. Install [Redis](https://redis.io/download) on a separate machine or in a separate Docker container.
+2. Configure the app to connect to the Redis server. You will need to specify the hostname and port of the Redis server, as well as any authentication credentials if necessary.
+3. Write test cases that use the Redis server as part of the testing process. For example, you might write tests that store and retrieve data from the Redis server to verify that the server is working correctly.
+
+## Testing with Swagger UI
+
+To install Swagger UI for testing API requests, follow these steps:
+
+1. Install the Swagger UI package by running `npm install -g swagger-ui-express` or adding it as a dependency in your `package.json` file.
+2. Add the Swagger UI middleware to the app by requiring the
 
 
 ## Author

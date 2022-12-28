@@ -80,4 +80,4 @@ scrape_configs:
 ECE DevOps project
 - Tresor MELE MBE
 - Abdourhamane DIALO 
-- Maiylis HARCHAOUI
+- Mailys HARCHAOUI

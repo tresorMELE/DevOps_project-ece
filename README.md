@@ -68,9 +68,7 @@ scrape_configs:
   - job_name: example
     static_configs:
       - targets: ['localhost:9090']
-
-
-
+````
 ## Author
 ECE DevOps project
 - Tresor MELE MBE

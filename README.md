@@ -1,7 +1,5 @@
 # DevOps SRE nodejs App project
 
-# My Node.js App
-
 This is a Node.js application that demonstrates how to develop, deploy, and test a web server using various tools and frameworks. It includes a few routes that return different responses when accessed, and it can be deployed using Docker and Kubernetes. It also includes a test environment with a Redis server, and a Swagger UI for testing API requests.
 
 ## Prerequisites
@@ -17,9 +15,6 @@ This is a Node.js application that demonstrates how to develop, deploy, and test
 To develop this app, follow these steps:
 
 1. Clone the repository to your local machine.
-    $ git clone https://github.com/tresorMELE/DevOps_project-ece.git
-    $ cd DevOps_project-ece
-## Install
 2. Install the dependencies by running `npm install`.
 3. Write your code and test it locally to ensure it works as expected.
 
@@ -47,6 +42,7 @@ To deploy this app using Kubernetes, follow these steps:
 To set up a test environment with a Redis server, follow these steps:
 
 1. Install [Redis](https://redis.io/download) on a separate machine or in a separate Docker container.
+
 
 ## Author
 ECE DevOps project

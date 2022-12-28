@@ -53,28 +53,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: Deploy to Kubernetes
         env:
           KUBECONFIG: ${{ secrets.kubeconfig }}
-        run: |
-          kubectl apply -f - <<EOF
-          apiVersion: apps/v1
-          kind: Deployment
-          metadata:
-            name: app-deployment
-          spec:
-            replicas: 1
-            selector:
-              matchLabels:
-                app: app
-            template:
-              metadata:
-                labels:
-                  app: app
-              spec:
-                containers:
-                - name: app
-                  image: myusername/app:latest
-          EOF
+          PATH: /usr/local/bin:${{ env.PATH }}
+        run: kubectl apply -f deployment.yml
 

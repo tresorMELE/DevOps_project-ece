@@ -12,6 +12,6 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE 9090
+EXPOSE 8080
 
-CMD [ "node", "index.js" ]
+CMD [ "node", "userapi/src/index.js" ]

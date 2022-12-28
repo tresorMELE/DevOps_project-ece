@@ -46,6 +46,6 @@ To set up a test environment with a Redis server, follow these steps:
 
 ## Author
 ECE DevOps project
-Tresor MELE MBE
-Abdourhamane DIALO 
-Maiylis HARCHAOUI
+- Tresor MELE MBE
+- Abdourhamane DIALO 
+- Maiylis HARCHAOUI
